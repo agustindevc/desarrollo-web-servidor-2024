@@ -44,7 +44,7 @@
         echo("Es la madrugada");
     endif;
 
-
+    Hola como estas
     $hora_exacta = date("G:i:s:u");
     echo($hora_exacta);
 
