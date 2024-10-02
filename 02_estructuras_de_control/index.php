@@ -26,7 +26,7 @@
             </tr>
             <tr>
                 <td>
-                    <a href="fechas.php">Numeros PHP</a>
+                    <a href="fechas.php">Fechas PHP</a>
                 </td>
                 <td>
                     Ejericios de fechas con al funcion date().

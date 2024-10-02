@@ -4,6 +4,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Fechas</title>
+    <?php
+        error_reporting( E_ALL );
+        ini_set( "display_errors", 1 );    
+    ?>
 </head>
 <body>
     <?php
@@ -78,6 +82,68 @@
         default:
             echo "Hoy no tenemos clase.";
     }
+
+    /*COn una estructura switch cambiar la variable dia a español
+    Reescribir el swithch de los dias de clase con la variable en español*/
+    
+    //EJERCICIO SWITCH
+    $dia = date("l");
+    echo "<h2>Hoy es $dia</h2>";
+
+    //Tenemos clases lunes, meircoles y viernes, elr esto no
+    //hacer un  switch que devuelva si el ese dia tenemos clase o no.
+
+    switch($dia){
+        case "Monday";
+            $dia = "Lunes";
+            echo "Hoy es $dia y tenemos clase.";
+            break;
+        case "Wednesday":
+            $dia = "Miercoles";
+            echo "Hoy es $dia y tenemos clase.";
+            break;
+        case "Friday":
+            $dia = "Viernes";
+            echo "Hoy es $dia y tenemos clase.";
+            break;
+        case "Tuesday":
+            $dia = "Martes";
+            echo "Hoy es $dia y no tenemos clase.";
+            break;
+            
+        case "Thursday":
+            $dia = "Jueves";
+            echo "Hoy es $dia y no tenemos clase.";
+            break;
+        case "Saturday":
+            $dia = "Sabado";
+            echo "Hoy es $dia y no tenemos clase.";
+            break;
+        case "Sunday":
+            $dia = "Domingo";
+            echo "Hoy es $dia y no tenemos clase.";
+            break;
+        } 
+
+        //OTRA FORMA CON MATCH (DEVUELVE UN VALOR ASIGNANDOLO A UNA VARIABLE)
+        $dia_espanol = match($dia){
+            "Monday" => "Lunes",
+            "Tuesday" => "Martes",
+            "Wednesday" => "Miercoles",
+            "Thursday" => "Jueves",
+            "Friday" => "Viernes",
+            "Saturday" => "Sabado",
+            "Sunday" => "Domingo",
+        };
+        echo "<h3>$dia_espanol</h3>";
+    
+
+        $resultado = match($n){
+            1 => "El numero es 1",
+            2 => "El numero es 2",
+            3 => "El numero es 3",
+        };
+        echo "<h3>$resultado</h3>";
     ?>
 </body>
 </html>

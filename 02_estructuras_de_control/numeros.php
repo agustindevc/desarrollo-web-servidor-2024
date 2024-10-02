@@ -135,6 +135,16 @@
 
             echo("<p>EL numero tiene $cifras cifras.</p>");
             
+
+            // VERSION CON MATCH
+            $resultado = match(true){
+                $numero_aleatorio  >= 1 && $numero_aleatorio <= 9 => 3,
+                $numero_aleatorio >= 10 && $numero_aleatorio <= 99 => 2,
+                $numero_aleatorio >= 100 && $numero_aleatorio <= 999 => 3,
+                default => "ERROR"
+            };
+
+            echo "<h1>El numero tiene $cifras cifras</h1>"
         ?>
 </body>
 </html>
