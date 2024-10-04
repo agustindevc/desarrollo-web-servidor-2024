@@ -8,3 +8,10 @@ th, td{
 caption{
     border: 2px solid red;
 }
+.aprobado{
+    background-color: green;
+}
+
+.suspenso{
+    background-color: red;
+}
