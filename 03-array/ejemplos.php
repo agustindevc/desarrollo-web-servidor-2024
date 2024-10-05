@@ -34,9 +34,9 @@
 
     $animales[2] = "Koala";
     $animales[6] = "Iguana";
-    $animales ["A01"] = "Elefante";
+    $animales ["A01"] = "Elefante"; /*Añande el elemento al final de array con su clave*/
     array_push($animales, "Morsa","Foca"); /*Array push añade varios elementos sin las claves.*/
-    $animales[] = "Ganso";
+    $animales[] = "Ganso"; /*Añade el elemento al final del array, sin clave. Se usa para elementos idnexador (nuimericamente)*/
     unset($animales["A02"]); /*Elimina el elemento QUE TENGA ESA CLAVE, O SI ES SIN CLAVE, DE LA UBICACION QUE SE LE INDIQUE ENTRE PARENTESIS*/
 
     $animales = array_values($animales); /*se carga las claves y reordena el array numericamente*/
@@ -64,7 +64,7 @@
     }
     echo "</ol>";
 
-    //PARA MOTRAR LA CLAVE Y EL VALOR UTILIZANDO FOR EACH
+    //PARA MOSTRAR LA CLAVE Y EL VALOR UTILIZANDO FOR EACH
     echo"<ol>";
     foreach($coches as $matricula => $coche){
         echo"<li>$coche</li>";

@@ -26,7 +26,7 @@
 <!--Resuelto con la profe-->
 
 <?php
-
+    //Creo un array clave-valor
     $asignaturas = [
         "Desarrollo web en entorno servidor" => "Alejandra",
         "Desarrollo  Web en entorno cliente" => "José Miguel",
@@ -37,6 +37,7 @@
     ];
 ?>
 
+<!--creacion de la tabla con HTML-->
 <table>
     <thead>
         <tr>
@@ -59,47 +60,6 @@
 </table>
 
 
-<!--RESUELTO POOR MI-->
-
-</html>
-    <table>
-        <caption>Asignaturas</caption>
-        <thead>
-            <tr>
-                <th>Asignatura</th>
-                <th>Profesor</th>
-            </tr>
-        </thead>
-        </tbody>
-            <tr>
-                <td>Desarrollo web en entorno servidor</td>
-                <td>Alejandra</td>
-            </tr>
-            <tr>
-                <td>Desarrollo  Web en entorno cliente</td>
-                <td>José Miguel</td>
-            </tr>
-            <tr>
-                <td>Diseño de interfaces web</td>
-                <td>José Miguel</td>
-            </tr>
-            <tr>
-                <td>Despliegue de aplicaciones</td>
-                <td>Jaime</td>
-            </tr>
-            <tr>
-                <td>EMpresa e iniciativa emprendedora</td>
-                <td>Andrea</td>
-            </tr>
-            <tr>
-                <td>Inglés</td>
-                <td>Virginia</td>
-            </tr>
-
-        <tbody>
-    </table>
-    <br><br><br>
-
 <!--EJERCICIO 2
 
     Francisco => 3
@@ -113,12 +73,12 @@
     -COLUMNA 3: SI NOTA < 5 SUSPENSO, SINO APROBADO
 -->
 
-    <!--RESUELTO POR LA PROFESORA0-->
+    <!--RESUELTO POR LA PROFESORA-->
 
     <?php
         $estudiantes = [
             "Francisco" => 3,
-            "DAniel" => 5,
+            "Daniel" => 5,
             "Aurora" => 10,
             "Ismael" => 0,
             "Luis" => 7,
@@ -161,133 +121,75 @@
     </table>
 
 <?php
-$alumno;
-$nota;
-$condicion;
-?>
+/**
+ * Insertar dos nuesvos estudiantes, con notas aleatorias entre 0 y 10
+ */
+ $estudiantes ["Agustin"] = 6, ["Ivan"] = 7;
 
-<table>
+
+
+ /* 
+ * Borrar un estudiante por clave.
+ */
+
+ unset($estudiantes["Agustin"])
+
+
+ /* Mostrar en una nueva tabla todo ordenado por los nombres en orden alfabeticamente inverso
+ */
+?>
+ 
+ <table>
     <thead>
         <tr>
-            <td>ALUMNO</td>
-            <td>NOTA</td>
-            <td>CONDICION</td>
+            <th>Estudiante</th>
+            <th>Nota</th>
         </tr>
     </thead>
     <tbody>
+        <?php
+        krsort($estudiantes);
+        foreach($estudiantes as $estudiante => $nota)?>
         <tr>
             <td>
-                <?php
-                $alumno = "Francisco";
-                echo($alumno)
-                ?>
+                <?php echo($nota)?>
             </td>
             <td>
-                <?php
-                    $nota = 3;
-                    echo($nota);
-                ?>
-            </td>
-            <td>
-                <?php
-                    if($nota < 5){
-                        $condicion="Suspenso";
-                    }
-                    else{
-                        $condicion = "Aprobado";
-                    }
-                    echo($condicion);
-                ?>
-            </td>
-        <tr>
-            <td>
-                <?php
-                $alumno = "Daniel";
-                echo($alumno)
-                ?>
-            </td>
-            <td>
-                <?php
-                    $nota = 5;
-                    echo($nota);
-                ?>
-            </td>
-            <td>
-                <?php
-                    if($nota < 5){
-                        $condicion="Suspenso";
-                    }
-                    else{
-                        $condicion = "Aprobado";
-                    }
-                    echo($condicion);
-                ?>
-            </td>
-        </tr>
-        <tr>
-            <td>
-                <?php
-                $alumno = "Aurora";
-                echo($alumno)
-                ?>
-            </td>
-            <td>
-                <?php
-                    $nota = 10;
-                    echo($nota);
-                ?>
-            </td>
-            <td>
-                <?php
-                    if($nota < 5){
-                        $condicion="Suspenso";
-                    }
-                    else{
-                        $condicion = "Aprobado";
-                    }
-                    echo($condicion);
-                ?>
-            </td>
-        </tr>
-        <tr>
-            <td>
-                <?php
-                $alumno = "Samuel";
-                echo($alumno)
-                ?>
-            </td>
-            <td>
-                <?php
-                    $nota = 9;
-                    echo($nota);
-                ?>
-            </td>
-            <td>
-                <?php
-                    if($nota < 5){
-                        $condicion="Suspenso";
-                    }
-                    else{
-                        $condicion = "Aprobado";
-                    }
-                    echo($condicion);
-                ?>
+                <?php echo($estudiante)?>
             </td>
         </tr>
     </tbody>
+ 
+ </table>
+
+ <?php
+ /* Mostrar en una nueva tabla todo ordenado por la nota de 10 a 0 (orden inverso)*/
+ ?>
+
+ <table>
+ <thead>
+     <tr>
+         <th>Estudiante</th>
+         <th>Nota</th>
+     </tr>
+ </thead>
+ <tbody>
+     <?php
+     arsort($estudiantes);
+     foreach($estudiantes as $estudiante => $nota)?>
+     <tr>
+         <td>
+             <?php echo($nota)?>
+         </td>
+         <td>
+             <?php echo($estudiante)?>
+         </td>
+     </tr>
+ </tbody>
+
 </table>
-<?php
-/**
- * Insertar dos nuesvos estudiantes, con notas aleatorias entre 0 y 10
- * 
- * Borrar une studiante por clave
- * 
- * Mostrar en una nueva tabla todo ordenado por los nombres en orden alfabeticamente inverso
- * 
- * Mostrar en una nueva tabla todo ordenado por la nota de 10 a 0 (orden inverso)
- * 
- */
-?>
+
+
 
 
 </body>
