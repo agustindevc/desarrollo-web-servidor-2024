@@ -65,19 +65,6 @@
 
     //LAS VARIABLES QUE HE CREADO PARA EL REORDENAMIENTO NO PUEDO VOLVER A UTILIZARLAS. SE DEBEN VOVLER A DECLARAR
     
-    /**
-     * 1. AÑADIR CON UN RAND, LA DURACION DE CADA PELICULA.
-     * LA DURACION SERA UN NUMERO ALEATORIO ENTRE 30 Y 240
-     * 
-     * 2. AÑADIR COMO UNA NUEVA COLUMNA, EL TIPO DE PELICULA. EL TIPO
-     * SERA CORTOMETRAJE SI LA DURACION ES MENOR QUE 60
-     * Y LARGOMETRAJE SI LA DURACION ES MAYOR O IGUAL QUE 60.
-     * 
-     * 3. MOSTRAR EN OTRA TABLA, TODAS LAS COLUMNAS Y ORDENAR ADEMAS EN ESTE ORDEN
-     *      1. GENERO
-     *      2. AÑO
-     *      3. TITULO (TODO ALFABETICAMENTE, Y EL AÑO DE MAS RECIENTE A MAS ANTIGUO).
-     */
     
     ?>
 
@@ -88,6 +75,8 @@
                 <th>Categoria</th>
                 <th>Precio</th>
                 <th>Condicion</th>
+                <th>Duracion</th>
+                <th>Tipo</th>
             </tr>
         </thead>
         <tbody>
@@ -97,12 +86,14 @@
                 //echo "<br><br>";
 
                 //otra forma
-                list($titulo, $categoria, $precio, $condicion) = $videojuego; //esta funcion descomone el array en varia variables.
+                list($titulo, $categoria, $precio, $condicion, $duraacion) = $videojuego; //esta funcion descomone el array en varia variables.
                 echo "<tr>";
                 echo"<td>$titulo</td>";
                 echo"<td>$categoria</td>";
                 echo"<td>$precio</td>";
                 echo"<td>$condicion</td>";
+                echo"<td>$duracion</td>";
+                echo"<td>$tipo</td>";
                 echo"</tr>";
 
             }
